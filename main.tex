@@ -1,0 +1,291 @@
+%%%%%%%% ICML 2021 EXAMPLE LATEX SUBMISSION FILE %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2021} with \usepackage[nohyperref]{icml2021} above.
+\usepackage{hyperref}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Use the following line for the initial blind version submitted for review:
+\usepackage{icml2021}
+\usepackage{natbib}
+
+% If accepted, instead use the following line for the camera-ready submission:
+%\usepackage[accepted]{icml2021}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title is supplied here:
+\icmltitlerunning{Learning the Neural Organization of Speech Perception from Behavioral Responses: A Deep Learning Approach}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Learning the Neural Organization of Speech Perception from Behavioral Responses: A Deep Learning Approach}
+
+% It is OKAY to include author information, even for blind
+% submissions: the style file will automatically remove it for you
+% unless you've provided the [accepted] option to the icml2021
+% package.
+
+% List of affiliations: The first argument should be a (short)
+% identifier you will use later to specify author affiliations
+% Academic affiliations should list Department, University, City, Region, Country
+% Industry affiliations should list Company, City, Region, Country
+
+% You can specify symbols, otherwise they are numbered in order.
+% Ideally, you should not use this facility. Affiliations will be numbered
+% in order of appearance and this is the preferred way.
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Aeiau Zzzz}{equal,to}
+\icmlauthor{Bauiu C.~Yyyy}{equal,to,goo}
+\icmlauthor{Cieua Vvvvv}{goo}
+\icmlauthor{Iaesut Saoeu}{ed}
+\icmlauthor{Fiuea Rrrr}{to}
+\icmlauthor{Tateu H.~Yasehe}{ed,to,goo}
+\icmlauthor{Aaoeu Iasoh}{goo}
+\icmlauthor{Buiui Eueu}{ed}
+\icmlauthor{Aeuia Zzzz}{ed}
+\icmlauthor{Bieea C.~Yyyy}{to,goo}
+\icmlauthor{Teoau Xxxx}{ed}
+\icmlauthor{Eee Pppp}{ed}
+\end{icmlauthorlist}
+
+\icmlaffiliation{to}{Department of Computation, University of Torontoland, Torontoland, Canada}
+\icmlaffiliation{goo}{Googol ShallowMind, New London, Michigan, USA}
+\icmlaffiliation{ed}{School of Computation, University of Edenborrow, Edenborrow, United Kingdom}
+
+\icmlcorrespondingauthor{Cieua Vvvvv}{c.vvvvv@googol.com}
+\icmlcorrespondingauthor{Eee Pppp}{ep@eden.co.uk}
+
+% You may provide any keywords that you
+% find helpful for describing your paper; these are used to populate
+% the "keywords" metadata in the PDF but will not be shown in the document
+\icmlkeywords{Machine Learning, ICML}
+
+\vskip 0.3in
+]
+
+% this must go after the closing bracket ] following \twocolumn[ ...
+
+% This command actually creates the footnote in the first column
+% listing the affiliations and the copyright notice.
+% The command takes one argument, which is text to display at the start of the footnote.
+% The \icmlEqualContribution command is standard text for equal contribution.
+% Remove it (just {}) if you do not need this facility.
+
+%\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+\printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
+
+\begin{abstract}
+Categorical perception (CP) is a neural process of detecting phonetic categories in sound.
+
+and is measured using response time (RT). The cognitive processes involved in mapping neural activities to behavioral response are stochastic and further compounded by individuality and variations. This thesis presents a data-driven approach and develops parameter optimized models to understand the relationship between cognitive events and behavioral response (e.g., RT). We introduce convolutional neural networks (CNN) to learn the representation from EEG recordings. In addition, we develop parameter optimized and interpretable models in decoding CP using two representations: 1) spatial-spectral topomaps and 2) evoked response potentials (ERP). We adopt state-of-the-art class discriminative visualization (GradCAM) tools to gain insights (as oppose to the’black box’ models) and building interpretable models. In addition, we develop a diverse set of models to account for the stochasticity and individual variations. We adopted weighted saliency scores of all models to quantify the learned representations’ effectiveness and utility in decoding CP manifested through behavioral response. Empirical analysis reveals that the $\gamma$ band and early ($\sim 0 - 200 ms$) and late ($\sim 300 - 500 ms$) right hemisphere IFG engagement is critical in determining individuals’ RT. Our observations are consistent with prior findings, further validating the efficacy of our data-driven approach and optimized interpretable models.
+\end{abstract}
+
+\section{Introduction}
+\label{submission}
+
+Categorical perception (CP) of speech is a cogntive process of grouping sounds into small phonetic categories \cite{cp}. CP of speech is a complex process reflecting individuals' ability to perceive sound and can be measured using response time (RT). The cognitive processes involved in mapping neural activities to behavioral responses can be decoded through in-depth analysis of neurophysiological recordings such as EEG. Decoding categorical perception (CP) from EEG recordings involves analyzing spatial-spectral-temporal properties that define the underlying cognitive functions \cite{beta2, Mahmud_2, Mahmud2019}]. The spatial, spectral, and temporal aspects explain \emph{'where'} in the brain, the type of operation (i.e., memory, attention) and  \emph{'when'} in time the neural activities occurs.
+
+
+While hypothesis-driven analysis is being widely used in decoding CP, but the multivariate approach based on machine learning (ML) algorithms have been gaining momentum. For example, the ML-based approach reported in \cite{Mahmud2019, Mahmud_2} show promising results in determining contributing factors in age-related hearing loss. In another work reported in \cite{Al_Fahad_2020} used an ML-based apporach to decode functional connectivity patterns in CP. The mentioned studies uses classical ML, such as support vector machines (SVM) [\cite{svm}] with stability selections [\cite{stability_selection}] to model cognitive processes involved in CP. The feature selection process provides a limited interpretation of the causal relationship between neural activities and behavioral responses.
+
+
+This thesis presents a data-driven approach and develops parameter optimized models to understand the relationship between cognitive events and behavioral responses (e.g., RT). We introduce convolutional neural networks (CNN) to learn the relevant features from EEG recordings using two representations: 1) spatial-spectral topomaps and 2) Event Related Potentials (ERP) to model the spatial-spectral and temporal properties of CP. In addition, we develop a diverse set of deep CNN models to account for the stochasticity and individual variations. We have used bootstrap averaging of trials to generate ERPs in both spatial-spectral and temporal data generation. We utilize bootstrapping process as a data augmentation step to generate a larger number of samples to improve the generalization of CNN models. We use Bayesian hyperparameter optimization algorithm Tree-structured Parzen Estimator (TPE) [\cite{TPE_1}] to find best performing spatial-spectral and temporal CNN models, respectively. We have selected ten best performing spatial-spectral and temporal CNNs separately to analyze behavioral responses in relation to CP.
+
+
+In deep learning (DL), model interpretation is still a challenge as these models contain millions of parameters and therefore are extremely difficult to interpret. Convolution Neural Networks (CNNs) are the only models in the DL arena, where insight into feature importance allocations is possible. The visual interpretation of models are achieved through class discriminative feature visualization techniques like Class Activation Maps [\cite{CAM}], GradCAM [\cite{gradcam}], CNN-fixation [\cite{cnn_fixation}] and EigenCAM [\cite{EigenCAM}]. Studies like \cite{eeg_cnn_gradcam, eeg_cnn_gradcam2, eeg_cnn_gradcam3} shows that GradCAM does capture feature importance allocation by CNNs from data and therefore could be used to infer spatial-spectral-temporal properties underlying a cognitive event. Despite the successes in visual interpretation, it begs the question \emph{"Are class discriminative feature visualizations alone enough to capture patterns dictating cognitive events from EEG data?"} To address this, we propose quantification of learned spatial-spectral-temporal representation from EEG data by CNN models.
+
+We argue that consistent patterns over multiple models could be considered the neural correlates of CP. To this extent, we have proposed the computation of overall saliency score that allows us to find the prevalent spatial-spectral-temporal patterns consistent over multiple CNN models. We have defined two processes to compute overall saliency scores, 1) averaging of saliency scores across models 2) performance weighted averaging of saliency scores across models. To understand the efficacy of CNN models, we performed mixed model ANOVA analysis on the saliency scores to determine the spatial-spectral-temporal differences in neurological actions that define the RT groups.
+
+We empirically evaluate the CNN models using the CP data obtained from 50 participants. First, we cluster the RTs using Gaussian Mixture Model (GMM). We modeled spatial-spectral-temporal attributes of the neural activities defining three categories of RT (slow, medium, and fast) from EEG data. Employing the proposed process, we observe that early and late engagement in right-hemispheric frontal regions (presumably IFG) is crucial in determining listeners' decision speed. We also find that all three bands ($\alpha, \beta, \gamma$) have active and passive roles while $\gamma$ band is the most significant in driving listeners' RT. The significance of $\gamma$ band suggests that auditory CP ability in individuals is the primary predictor of their decision speed. Our findings are coherent with recent and prior studies of brain-behavior function in auditory CP, a validation of our decoding process using CNNs.
+
+The rest of the thesis is organized as follows: in chapter 2, we review existing decoding processes from EEG data using CNNs and the use of machine learning algorithms in decoding auditory CP. Chapter 3 provides a detailed description of our proposed modeling and decoding process, and in chapter 4, we present our modeling and decoding results. Finally, in chapter 5, we discuss our approach's novelty and the findings of the cognitive processing of behavioral responses in categorical speech perception.
+
+
+\section{Data}
+
+\textbf{Participants:} The dataset consisted of 50 participants, which we used for modeling the behavioral aspect of CP. All of the participants were recruited from the University of Memphis student body and the Greater Memphis area. The experiment consisted of 15 males and 35 females aging between 18 and 60 years with a mean of $\approx$ 24 years. Participants were strongly right-handed (mean Edinburgh Hand Score $\approx$ 80.0), had acquired a collegiate level of education (mean $\approx$ 17 years), and had a median of 1 year of formal music training. All participants were paid for their time and gave informed consent in compliance with the Institutional Review Board at the University of Memphis. Figure \ref{demograph} (A, B) shows the demographic of the participants.
+
+\textbf{EEG Recording \& Preprocessing:} During the experiment, the participants were instructed to listen from a five-step vowel continuum; each token of the continuum was separated by equidistant steps based on first formant frequency (F1) categorically perceived as /u/ to /a/. Tokens were 100 ms long, including 10 ms rise and fall time. The stimuli were delivered through shielded insert earphones; listeners heard 150-200 trials of individual tokens and were asked to label the sound as perceived through binary responses (‘u’ or ‘a’). Response times (RTs) were recorded as the difference between the stimulus onset and the behavioral response (labeling of tokens). Simultaneous EEG recording was carried out using 64 sintered Ag/AgCI electrodes at standard 10-10 locations around the scalp during the trials. As subsequent preprocessing steps, ocular artifacts were corrected using principal component analysis (PCA), filtered (bandpass: 1-100 Hz; notch filter: 60 Hz), epoched (-200 to 800 ms) into single trials, and baseline corrected (-200 ms to 0 ms).
+
+\textbf{Behavioral Data Analysis:} To classify behavioral CP, we opted to form categories within RTs from all the samples using the exact process in \cite{Al_Fahad_2020}. The idea is to use Gaussian Mixture Model (GMM) with expectation-maximization (EM) to identify the plausible number of clusters from the distribution of RTs. We found four clusters within the distribution of RT using the Bayesian Information Criterion (BIC) as a metric to select the optimal number of components (clusters, ranges from 1-14) and the type of covariance parameter (full, tied, diagonal, and spherical). The procedure concluded with an optimal of four clusters using covariance type ‘spherical’. We inferred fast, medium, and slow RTs as the underlying categories based on the centroid and minimum, maximum range of each of these clusters. The fourth cluster was determined to be an outlier due to its low probability and was discarded from further analysis. Figure \ref{rt_cluster} illustrates the optimization of GMM, the RT distribution, the probability of each RT cluster, and the maximum, minimum range of each RT cluster.
+
+\textbf{Spatial-Spectral Representation:} As explained earlier, we have opted to use bootstrapping to generate more examples appropriate for modeling using DL tools. We use the process of sampling trials with replacement in individual RT clusters and averaging them to generate ERPs. We sampled and averaged 50 trials at once in each RT cluster and repeated this process 500 times. This process produced 62525 ERPs, converting to power spectral densities (PSDs) and band powers. We compute PSDs focusing on three frequency bands: $\alpha$ (8-15 Hz), $\beta$ (16-31 Hz), and $\gamma$ (32–60 Hz). We used the built-in \emph{psd\_welch function}  provided in the open-source software package MNE-Python [\cite{mne}] to compute the PSDs for the three distinct bands. Next, we average across each discrete frequencies within the bands to acquire average band power for each of the 64 channels. The first three steps of Figure \ref{topomap_gen} (A, B, C) depicts the band power calculation from the ERPs. We proceed to project these scaler band powers into a 2d topographical representation of the scalp known as topomap. The scaler band powers associated with each channel get mapped into the location of the channel in the topomap and extrapolated (‘box’) for crisp visual representation. We generate topomaps for the three-band powers $(\alpha, \beta, \gamma)$ individually, convert them to grayscale images, and stack them along the third dimension (RGB color channels) [\cite{bashivan2015}]. In this way, each of the bands gets represented through different color channels (see Figure \ref{topomap_gen} (D)). We used the \emph{plot\_topomap} from MNE-Python to generate the topomaps from the average band powers.
+
+\section{Modeling}
+
+\textbf{Hyperparameter Optimization:} We use topomaps to model the spatial-spectral attributes of the behavioral CP, as mentioned in section 3.1.4. Among the 62525 topomaps generated, we used 46893 (75\%) samples for training and 15632 (25\%) for testing on each model optimized by the TPE algorithm. We optimize the architecture and the general hyperparameters (e.g., batch size, epochs, learning rate); table \ref{tab:tpe_var_spsm} describes the hyperparameters optimized by TPE for SPSMs. We utilized Adam [\cite{adam}], Nadam [\cite{nadam}] and RMSprop as the optimizers (learning algorithm) and ReLU [\cite{relu}, \cite{relu_2}] or ELU [\cite{elu}] as activation functions during TPE optimization of SPSMs. In the convolution layers, each layer contains twice the number of filters than the previous layer. If there are more than four layers, then the number of filters on each layer is iteratively increased with a constant value (the initial number of filters chosen by TPE). The kernel size of filters in convolution layers and residual layers are fixed ($3 \times 3$) with single strides (1, 1). The pooling size in max-pooling layers after convolution layers is also fixed ($2 \times 2$) with single strides (1, 1). We ran 35 trials of the TPE optimization of spatial-spectral modeling and chose the top 10 SPSMs (based on test accuracy) among 35 for analysis (see section 3.4 for rationale). Figure \ref{tpe_hp_spsm} illustrate the chosen hyperparameters during each trial with associated test accuracy.
+
+\begin{table*}[h!tb]
+    \centering
+    \caption{The hyperparameter optimized for SPSMs with TPE}
+    \begin{tabular}{ll}
+      \textbf{Hyperparameter} & \textbf{Description} \\
+      \hline
+      $batch\_size$ & The batch size during training. \\
+      $epochs$ & The number of epochs during training.  \\
+      $first\_conv$ & The number of stacked convolution layers in the bottom of the network. \\
+      $nb\_conv\_pool\_layers$ & The number of consecutive convolution and max-pool layers. \\
+      $conv\_hiddn\_units\_mult$ & The number of filters in the 1st convolution layer ($40 \times mult$). \\
+      $conv\_dropout\_drop\_proba$ &  The dropout probability of convolution filters. \\
+      $residual$ & The number of residual layers, inspired by ResNet [\cite{resnet}]. \\
+      $conv\_pool\_res\_start\_idx$ & The layer to start the residual connections. \\
+      $fc\_units\_1\_mult$ & The number of neuron in the 1st fully connected (fc) layer ($750 \times mult$). \\
+      $fc\_dropout\_drop\_proba$ & The dropout probability of neurons in the fully connected layers. \\
+      $one\_more\_fc$ & The number of neurons in the 2nd layer of the fc layers ($750 \times mult$). \\
+      $l2\_weight\_reg\_mult$ & The $l2$ regularization parameter ($\lambda = 0.0007 \times mult$). \\
+      $lr\_rate\_mult$ & The learning rate parameter ($lr = 10 ^ {-5} \times mult$). \\
+      $use\_BN$ & The use of batch normalization in convolution layers. \\
+      $activation$ & The activation function in the convolution and fc layers. \\
+      $optimizer$ & The optimization algorithm.
+    \end{tabular}
+
+    \label{tab:tpe_var_spsm}
+\end{table*}
+
+\textbf{Performance:} The hyperparameter optimization for both temporal and spatial-spectral models are run for 35 trials. Figure \ref{tpe_test_acc} illustrates the test accuracy of SPSMs and TMs during the trials. The TPE algorithm iteratively chooses hyperparameters that gradually improves the modeling of some arbitrary function. Among the 35 SPSMs and TMs, the mean test accuracy was 75.52 and 82.66, respectively. The top 10 SPSMs has a range of test accuracy from $\approx$ 83\% to 87\%, while the range for the top 10 TMs is from $\approx$ 91\% to 95\%. Table \ref{tab:cr} shows the performance of the top 10 SPSMs and TMs respectively.
+
+\begin{table*}[h!tb]
+        \centering
+        \caption{Performance of SPSMs}
+        \begin{tabular}{c | c | c | c | c | c}
+        \textbf{Model} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 Score} & \textbf{AUC} & \textbf{Accuracy} \\
+        \hline
+        SPSM-1 & 82.96\% & 84.80\% & 83.59\% & 95.86\% & 83.22\% \\
+        SPSM-2 & 84.25\% & 84.22\% & 84.05\% & 95.86\% & 83.35\% \\
+        SPSM-3 & 84.23\% & 84.25\% & 84.16\% & 95.57\% & 83.58\% \\
+        SPSM-4 & 84.97\% & 84.46\% & 84.69\% & 95.60\% & 84.05\% \\
+        SPSM-5 & 84.43\% & 85.29\% & 84.83\% & 95.87\% & 84.25\% \\
+        SPSM-6 & 84.90\% & 85.24\% & 85.01\% & 95.92\% & 84.53\% \\
+        SPSM-7 & 86.21\% & 87.10\% & 86.60\% & 96.76\% & 86.09\% \\
+        SPSM-8 & 87.12\% & 87.02\% & 87.07\% & 96.79\% & 86.46\% \\
+        SPSM-9 & 87.54\% & 88.03\% & 87.75\% & 97.16\% & 87.24\% \\
+        SPSM-10 & 87.70\% & 87.95\% & 87.79\% & 97.07\% & 87.28\% \\
+       \end{tabular}
+    \end{table*}
+\section{Learned Representation}
+In this section, we present individual and overall learned representations across SPSMs and TMs through saliency score. The spatial, spectral, and temporal saliency score (denoted by $S_e, S_\mathbf{f}, S_\mathbf{t}$ respectively) quantifies the features selected by the models on each of these aspects. To observe the consistent learned representation across models, we have computed the overall saliency score through weighted-averaging of saliency scores of all the models (see equation \ref{ovr_sal_eqn}). Figure \ref{sc_spatial}, \ref{sc_spectral}, \ref{sc_temporal} illustrates the spatial, spectral and temporal feature importance given by each of the respective models as well as consistent feature detected across them. The spectral and temporal difference between RT groups is inferred through pairwise Tukey HSD test and mixed-model ANOVA analysis on the respective overall saliency scores. By comparing RT groups within each band and timesteps using these tests, we were able to observe \emph{'how'} and \emph{'when'} the neural activities varies in dictating individuals RT.
+
+Figure \ref{sc_spectral} illustrates the overall and individual band saliency variation across samples as modeled by top 10 SPSMs. Primary observation suggests that the $\gamma$ band is the most prominent in determining speech categorization behavior, although some SPSMs suggest that the $\alpha$ band is the most salient. But through overall spectral saliency score we see that $\gamma$ band is associated with the highest score ($S_\alpha = 0.015, S_\beta = 0.006, S_\gamma = 0.026$). It is also clear from the analysis of spectral saliency scores that different models learn different spectral patterns.
+
+Decoding response time (RT) in speech categorization reveals perceptual differences that drive speech identification ability among individuals [\cite{Al_Fahad_2020}]. Auditory categorization in the human brain is revealed to use a distributed frontal-temporal-parietal network by contemporary EEG studies [\cite{plasticity_sp, language_sp, Al_Fahad_2020}]. The canonical language processing is left hemisphere (LH) predominantly. However, through the consensus of the best performing SPSMs that right hemisphere (RH) engagement is responsible for decoding RT of categorical speech processing. Especially, frontal regions in RH (F8, F6, FC2, FC4, FC6) are significant in mapping speech to the behavioral response. \cite{RH_IFG1, RH_IFG2} found through fMRI experiments that right inferior frontal gyrus (IFG) activation is responsible for attentional control and detection of task-relevant cues. Our results through overall saliency scores also suggest similar findings as the fast and medium RT groups show more importance in the F6, F8, FC6, FC8 spatial locations (presumably IFG) implying more attentional power in speech categorization decision (see figure \ref{overall_sp_saliency}). In terms of perceptual encoding of speech, we also find our spatial results to be coherent as \cite{Bidelman2016FunctionalCI} found that audio stimuli of lower SNR cause increased engagement of primary auditory cortex (PAC) and IFG in RH. Participants in our experiment predominantly reacted faster when given clear tokens (TK 1, 2, 4, 5) than the ambiguous one (TK. 3) (see figure \ref{demograph}), which explains the functional lateralization of RH. In the case of slower RT, we find more distributed region activations. Specifically, specfically we see a lesser activation in the frontal region (presumably IFG) in RH, which suggests lack of attentional control is responsible for driving slower RT. \cite{Al_Fahad_2020} found in decoding RT from functional connectivity measures that activities outside the CP hub are the leading cause for slower RTs. We also find a similar pattern in our inference through overall spatial saliency as fast and medium RTs show a clear frontal-temporal-parietal (F5, F7, M1, P1, PO3, PO7) activation in LH. In contrast, the slower RT groups show no significant activations in LH frontal and temporal regions.
+
+We assess through pairwise Tukey HSD test on the overall spectral saliency scores that $\alpha$ and $\gamma$ band distinguishes between the fast-med ($p < .0001$) and fast-slow ($p < .0001$) group while $\beta$ band is solely capable of characterizing the difference between med-slow ($p = 0.0461$) RT groups (see table \ref{tab:spec_comp}). These findings corroborate different theories about neurological processes in association with auditory CP. Our study shows that $\gamma$ band is more predictive of participants decision time as it acquire the the highest overall spectral saliency score. This is coherent with the recent study of \cite{Mahmud2020} suggesting $\gamma$ band modulations are more correlated with listeners' behavioral CP. So, we can hypothesize that auditory object construction [\cite{obj_con_gamma}] and local network synchronization [\cite{net_gamma1, net_gamma2, net_gamma3}] is crucial in determining listeners' RT as $\gamma$ is found to be responsible for these tasks. Our result also suggests that $\beta$ band is associated with large difference in RTs (fast-slow) of listeners. We conclude that listeners' speech identification capacity [\cite{beta1}] and representational memory [\cite{beta2}] also plays a pivotal role in dictating the extreme ends of behavioral responses. The effect of $\beta$ band in the difference of medium and slow RTs is limited in our results. We assume the $\beta$ band is only significant in late medium and early slow RT ranges ($\approx \, 700 - 1000 ms$). Our assumption is based on the comparatively insignificant effect of $\beta$ band ($p = 0.0461$) on the distinction between these RT groups. Nevertheless, we conclude that the effect of $\beta$ band on this matter either could be related to motor-related activity and uncertainty in decision tasks [\cite{beta3, beta4}] or reflection of weak hearing capacity as \cite{beta5} found top-down $\beta$ connectivity increases for impoverished auditory inputs with minimal behavioral changes. The findings in \cite{alpha} support the role of $\alpha$ band in discriminating fast-med and fast-slow RT groups where early evoked $\alpha$ oscillations were found to be fundamental in distinguishing behavioral responses between trained and untrained listeners (i.e., musicians vs. non-musicians). So, the effect of the $\alpha$ band in our data might reflect listeners' attentional control capacity dictated by their musical training experience.
+
+\begin{table}[h!tb]
+    \centering
+    \caption{Significance of $\alpha, \beta, \gamma$ band in distinguishing RT groups.}
+    \begin{tabular}{c | c}
+      \hline
+      \textbf{RT Groups} & \textbf{p-value} \\
+      \hline
+      \multicolumn{2}{c}{$\mathbf{\alpha}$} \\
+      \hline
+      fast - med & $<.0001$ \\
+      fast - slow & $<.0001$  \\
+      med - slow & $0.2638$ \\
+      \hline
+      \multicolumn{2}{c}{$\mathbf{\beta}$} \\
+      \hline
+      fast - med & $0.1135$ \\
+      fast - slow & $<.0001$  \\
+      med - slow & $0.0461$ \\
+      \hline
+      \multicolumn{2}{c}{$\mathbf{\gamma}$} \\
+      \hline
+      fast - med & $<.0001$ \\
+      fast - slow & $<.0001$  \\
+      med - slow & $0.2816$ \\
+      \hline
+    \end{tabular}
+
+    \label{tab:spec_comp}
+\end{table}
+
+\section{Conclusion}
+
+If a paper is accepted, we strongly encourage the publication of software and data with the
+camera-ready version of the paper whenever appropriate. This can be
+done by including a URL in the camera-ready copy. However, \textbf{do not}
+include URLs that reveal your institution or identity in your
+submission for review. Instead, provide an anonymous URL or upload
+the material as ``Supplementary Material'' into the CMT reviewing
+system. Note that reviewers are not required to look at this material
+when writing their review.
+
+% Acknowledgements should only appear in the accepted version.
+\section*{Acknowledgements}
+
+\textbf{Do not} include acknowledgements in the initial version of
+the paper submitted for blind review.
+
+If a paper is accepted, the final camera-ready version can (and
+probably should) include acknowledgements. In this case, please
+place such acknowledgements in an unnumbered section at the
+end of the paper. Typically, this will include thanks to reviewers
+who gave useful comments, to colleagues who contributed to the ideas,
+and to funding agencies and corporate sponsors that provided financial
+support.
+
+
+% In the unusual situation where you want a paper to appear in the
+% references without citing it in the main text, use \nocite
+\nocite{langley00}
+
+\bibliography{references}
+\bibliographystyle{icml2021}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DELETE THIS PART. DO NOT PLACE CONTENT AFTER THE REFERENCES!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{Do \emph{not} have an appendix here}
+
+\textbf{\emph{Do not put content after the references.}}
+%
+Put anything that you might normally include after the references in a separate
+supplementary file.
+
+We recommend that you build supplementary material in a separate document.
+If you must create one PDF and cut it up, please be careful to use a tool that
+doesn't alter the margins, and that doesn't aggressively rewrite the PDF file.
+pdftk usually works fine.
+
+\textbf{Please do not use Apple's preview to cut off supplementary material.} In
+previous years it has altered margins, and created headaches at the camera-ready
+stage.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+
+
+% This document was modified from the file originally made available by
+% Pat Langley and Andrea Danyluk for ICML-2K. This version was created
+% by Iain Murray in 2018, and modified by Alexandre Bouchard in
+% 2019 and 2021. Previous contributors include Dan Roy, Lise Getoor and Tobias
+% Scheffer, which was slightly modified from the 2010 version by
+% Thorsten Joachims & Johannes Fuernkranz, slightly modified from the
+% 2009 version by Kiri Wagstaff and Sam Roweis's 2008 version, which is
+% slightly modified from Prasad Tadepalli's 2007 version which is a
+% lightly changed version of the previous year's version by Andrew
+% Moore, which was in turn edited from those of Kristian Kersting and
+% Codrina Lauth. Alex Smola contributed to the algorithmic style files.

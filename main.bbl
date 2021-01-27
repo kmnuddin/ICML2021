@@ -1,0 +1,345 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Al-Fahad et~al.(2020)Al-Fahad, Yeasin, and Bidelman]{Al_Fahad_2020}
+Al-Fahad, R., Yeasin, M., and Bidelman, G.~M.
+\newblock Decoding of single-trial {EEG} reveals unique states of functional
+  brain connectivity that drive rapid speech categorization decisions.
+\newblock \emph{Journal of Neural Engineering}, 17\penalty0 (1):\penalty0
+  016045, feb 2020.
+\newblock \doi{10.1088/1741-2552/ab6040}.
+\newblock URL \url{https://doi.org/10.1088%2F1741-2552%2Fab6040}.
+
+\bibitem[Bashivan et~al.(2014)Bashivan, Bidelman, and Yeasin]{beta2}
+Bashivan, P., Bidelman, G., and Yeasin, M.
+\newblock Spectrotemporal dynamics of the eeg during working memory encoding
+  and maintenance predicts individual behavioral capacity.
+\newblock \emph{European Journal of Neuroscience}, 40, 10 2014.
+\newblock \doi{10.1111/ejn.12749}.
+
+\bibitem[Bashivan et~al.(2015)Bashivan, Rish, Yeasin, and
+  Codella]{bashivan2015}
+Bashivan, P., Rish, I., Yeasin, M., and Codella, C. F.~N.
+\newblock Learning representations from eeg with deep recurrent-convolutional
+  neural networks.
+\newblock \emph{International Conference on Learning Representations}, 2015.
+
+\bibitem[Bergstra et~al.(2011)Bergstra, Bardenet, Bengio, and K\'{e}gl]{TPE_1}
+Bergstra, J.~S., Bardenet, R., Bengio, Y., and K\'{e}gl, B.
+\newblock Algorithms for hyper-parameter optimization.
+\newblock In Shawe-Taylor, J., Zemel, R.~S., Bartlett, P.~L., Pereira, F., and
+  Weinberger, K.~Q. (eds.), \emph{Advances in Neural Information Processing
+  Systems 24}, pp.\  2546--2554. Curran Associates, Inc., 2011.
+\newblock URL
+  \url{http://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf}.
+
+\bibitem[Bidelman \& Howell(2016)Bidelman and Howell]{Bidelman2016FunctionalCI}
+Bidelman, G. and Howell, M.
+\newblock Functional changes in inter- and intra-hemispheric cortical
+  processing underlying degraded speech perception.
+\newblock \emph{NeuroImage}, 124:\penalty0 581--590, 2016.
+
+\bibitem[Bidelman et~al.(2019)Bidelman, Mahmud, Yeasin, Shen, Arnott, and
+  Alain]{Mahmud2019}
+Bidelman, G., Mahmud, M.~S., Yeasin, M., Shen, D., Arnott, S., and Alain, C.
+\newblock Age-related hearing loss increases full-brain connectivity while
+  reversing directed signaling within the dorsal–ventral pathway for speech.
+\newblock \emph{Brain Structure and Function}, 224, 07 2019.
+\newblock \doi{10.1007/s00429-019-01922-9}.
+
+\bibitem[Bidelman(2017)]{alpha}
+Bidelman, G.~M.
+\newblock Amplified induced neural oscillatory activity predicts musicians’
+  benefits in categorical speech perception.
+\newblock \emph{Neuroscience}, 348:\penalty0 107 -- 113, 2017.
+\newblock ISSN 0306-4522.
+\newblock \doi{https://doi.org/10.1016/j.neuroscience.2017.02.015}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0306452217300982}.
+
+\bibitem[Bidelman \& Lee(2015{\natexlab{a}})Bidelman and Lee]{beta1}
+Bidelman, G.~M. and Lee, C.-C.
+\newblock Effects of language experience and stimulus context on the neural
+  organization and categorical perception of speech.
+\newblock \emph{NeuroImage}, 120:\penalty0 191 -- 200, 2015{\natexlab{a}}.
+\newblock ISSN 1053-8119.
+\newblock \doi{https://doi.org/10.1016/j.neuroimage.2015.06.087}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1053811915005923}.
+
+\bibitem[Bidelman \& Lee(2015{\natexlab{b}})Bidelman and Lee]{language_sp}
+Bidelman, G.~M. and Lee, C.-C.
+\newblock Effects of language experience and stimulus context on the neural
+  organization and categorical perception of speech.
+\newblock \emph{NeuroImage}, 120:\penalty0 191 -- 200, 2015{\natexlab{b}}.
+\newblock ISSN 1053-8119.
+\newblock \doi{https://doi.org/10.1016/j.neuroimage.2015.06.087}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1053811915005923}.
+
+\bibitem[Bidelman \& Walker(2019)Bidelman and Walker]{plasticity_sp}
+Bidelman, G.~M. and Walker, B.
+\newblock Plasticity in auditory categorization is supported by differential
+  engagement of the auditory-linguistic network.
+\newblock \emph{NeuroImage}, 201:\penalty0 116022, 2019.
+\newblock ISSN 1053-8119.
+\newblock \doi{https://doi.org/10.1016/j.neuroimage.2019.116022}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1053811919306032}.
+
+\bibitem[Clevert et~al.(2016)Clevert, Unterthiner, and Hochreiter]{elu}
+Clevert, D.-A., Unterthiner, T., and Hochreiter, S.
+\newblock Fast and accurate deep network learning by exponential linear units
+  (elus).
+\newblock \emph{CoRR}, abs/1511.07289, 2016.
+
+\bibitem[Cortes \& Vapnik(1995)Cortes and Vapnik]{svm}
+Cortes, C. and Vapnik, V.
+\newblock Support-vector networks.
+\newblock \emph{Mach. Learn.}, 20\penalty0 (3):\penalty0 273–297, September
+  1995.
+\newblock ISSN 0885-6125.
+\newblock \doi{10.1023/A:1022627411411}.
+\newblock URL \url{https://doi.org/10.1023/A:1022627411411}.
+
+\bibitem[Dozat(2016)]{nadam}
+Dozat, T.
+\newblock Incorporating nesterov momentum into adam.
+\newblock 2016.
+
+\bibitem[Giraud \& Poeppel(2012)Giraud and Poeppel]{net_gamma1}
+Giraud, A.-L. and Poeppel, D.
+\newblock Cortical oscillations and speech processing: Emerging computational
+  principles and operations.
+\newblock \emph{Nature neuroscience}, 15:\penalty0 511--7, 03 2012.
+\newblock \doi{10.1038/nn.3063}.
+
+\bibitem[Gramfort et~al.(2013)Gramfort, Luessi, Larson, Engemann, Strohmeier,
+  Brodbeck, Goj, Jas, Brooks, Parkkonen, and Hämäläinen]{mne}
+Gramfort, A., Luessi, M., Larson, E., Engemann, D., Strohmeier, D., Brodbeck,
+  C., Goj, R., Jas, M., Brooks, T., Parkkonen, L., and Hämäläinen, M.
+\newblock Meg and eeg data analysis with mne-python.
+\newblock \emph{Frontiers in Neuroscience}, 7:\penalty0 267, 2013.
+\newblock ISSN 1662-453X.
+\newblock \doi{10.3389/fnins.2013.00267}.
+\newblock URL
+  \url{https://www.frontiersin.org/article/10.3389/fnins.2013.00267}.
+
+\bibitem[Haenschel et~al.(2000)Haenschel, Baldeweg, Croft, Whittington, and
+  Gruzelier]{net_gamma2}
+Haenschel, C., Baldeweg, T., Croft, R.~J., Whittington, M., and Gruzelier, J.
+\newblock Gamma and beta frequency oscillations in response to novel auditory
+  stimuli: A comparison of human electroencephalogram (eeg) data with in vitro
+  models.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 97\penalty0
+  (13):\penalty0 7645--7650, 2000.
+\newblock \doi{10.1073/pnas.120162397}.
+\newblock URL \url{https://www.pnas.org/content/97/13/7645}.
+
+\bibitem[Hahnloser et~al.(2000)Hahnloser, Sarpeshkar, Mahowald, Douglas, and
+  Seung]{relu}
+Hahnloser, R. H.~R., Sarpeshkar, R., Mahowald, M.~A., Douglas, R.~J., and
+  Seung, H.~S.
+\newblock Digital selection and analogue amplification coexist in a
+  cortex-inspired silicon circuit.
+\newblock \emph{Nature}, 405\penalty0 (6789):\penalty0 947--951, June 2000.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/35016072}.
+\newblock URL \url{https://doi.org/10.1038/35016072}.
+
+\bibitem[Hampshire et~al.(2009)Hampshire, Thompson, Duncan, and Owen]{RH_IFG1}
+Hampshire, A., Thompson, R., Duncan, J., and Owen, A.
+\newblock Selective tuning of the right inferior frontal gyrus during target
+  detection.
+\newblock \emph{Cognitive, Affective, \& Behavioral Neuroscience}, 9:\penalty0
+  103--112, 2009.
+
+\bibitem[Hampshire et~al.(2010)Hampshire, Chamberlain, Monti, Duncan, and
+  Owen]{RH_IFG2}
+Hampshire, A., Chamberlain, S., Monti, M., Duncan, J., and Owen, A.
+\newblock The role of the right inferior frontal gyrus: inhibition and
+  attentional control.
+\newblock \emph{Neuroimage}, 50:\penalty0 1313--1319, 2010.
+
+\bibitem[{He} et~al.(2016){He}, {Zhang}, {Ren}, and {Sun}]{resnet}
+{He}, K., {Zhang}, X., {Ren}, S., and {Sun}, J.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pp.\  770--778, 2016.
+
+\bibitem[{Jarrett} et~al.(2009){Jarrett}, {Kavukcuoglu}, {Ranzato}, and
+  {LeCun}]{relu_2}
+{Jarrett}, K., {Kavukcuoglu}, K., {Ranzato}, M., and {LeCun}, Y.
+\newblock What is the best multi-stage architecture for object recognition?
+\newblock In \emph{2009 IEEE 12th International Conference on Computer Vision},
+  pp.\  2146--2153, 2009.
+
+\bibitem[Jonas et~al.(2019)Jonas, Rossetti, Oddo, Jenni, Favaro, and
+  Zubler]{eeg_cnn_gradcam}
+Jonas, S., Rossetti, A.~O., Oddo, M., Jenni, S., Favaro, P., and Zubler, F.
+\newblock Eeg-based outcome prediction after cardiac arrest with convolutional
+  neural networks: Performance and visualization of discriminative features.
+\newblock \emph{Human Brain Mapping}, 40\penalty0 (16):\penalty0 4606--4617,
+  2019.
+\newblock \doi{10.1002/hbm.24724}.
+
+\bibitem[Kingma \& Ba(2014)Kingma and Ba]{adam}
+Kingma, D. and Ba, J.
+\newblock Adam: A method for stochastic optimization.
+\newblock \emph{International Conference on Learning Representations}, 12 2014.
+
+\bibitem[Li et~al.(2020)Li, Yang, Li, Chen, and Du]{eeg_cnn_gradcam2}
+Li, Y., Yang, H., Li, J., Chen, D., and Du, M.
+\newblock Eeg-based intention recognition with deep recurrent-convolution
+  neural network: Performance and channel selection by grad-cam.
+\newblock \emph{Neurocomputing}, 415:\penalty0 225 -- 233, 2020.
+\newblock ISSN 0925-2312.
+\newblock \doi{https://doi.org/10.1016/j.neucom.2020.07.072}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0925231220311863}.
+
+\bibitem[Liberman et~al.(1967)Liberman, Cooper, Shankweiler, and
+  Studdert-Kennedy]{cp}
+Liberman, A., Cooper, F., Shankweiler, D., and Studdert-Kennedy, M.
+\newblock Perception of the speech code.
+\newblock \emph{Psychological review}, 74:\penalty0 431--61, 12 1967.
+\newblock \doi{10.1037/h0020279}.
+
+\bibitem[Mahmud et~al.(2020{\natexlab{a}})Mahmud, Ahmed, Al-Fahad, Moinuddin,
+  Yeasin, Alain, and Bidelman]{Mahmud_2}
+Mahmud, M.~S., Ahmed, F., Al-Fahad, R., Moinuddin, K.~A., Yeasin, M., Alain,
+  C., and Bidelman, G.~M.
+\newblock Decoding hearing-related changes in older adults’ spatiotemporal
+  neural processing of speech using machine learning.
+\newblock \emph{Frontiers in Neuroscience}, 14:\penalty0 748,
+  2020{\natexlab{a}}.
+\newblock ISSN 1662-453X.
+\newblock \doi{10.3389/fnins.2020.00748}.
+\newblock URL
+  \url{https://www.frontiersin.org/article/10.3389/fnins.2020.00748}.
+
+\bibitem[Mahmud et~al.(2020{\natexlab{b}})Mahmud, Yeasin, and
+  Bidelman]{Mahmud2020}
+Mahmud, M.~S., Yeasin, M., and Bidelman, G.~M.
+\newblock Speech categorization is better described by induced rather than
+  evoked neural activity.
+\newblock \emph{bioRxiv}, 2020{\natexlab{b}}.
+\newblock \doi{10.1101/2020.10.20.347526}.
+\newblock URL
+  \url{https://www.biorxiv.org/content/early/2020/10/21/2020.10.20.347526}.
+
+\bibitem[Meinshausen \& Bühlmann(2010)Meinshausen and
+  Bühlmann]{stability_selection}
+Meinshausen, N. and Bühlmann, P.
+\newblock Stability selection.
+\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 72\penalty0 (4):\penalty0 417--473, 2010.
+\newblock \doi{https://doi.org/10.1111/j.1467-9868.2010.00740.x}.
+\newblock URL
+  \url{https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9868.2010.00740.x}.
+
+\bibitem[{Mopuri} et~al.(2019){Mopuri}, {Garg}, and {Venkatesh
+  Babu}]{cnn_fixation}
+{Mopuri}, K.~R., {Garg}, U., and {Venkatesh Babu}, R.
+\newblock Cnn fixations: An unraveling approach to visualize the discriminative
+  image regions.
+\newblock \emph{IEEE Transactions on Image Processing}, 28\penalty0
+  (5):\penalty0 2116--2125, May 2019.
+\newblock ISSN 1941-0042.
+\newblock \doi{10.1109/TIP.2018.2881920}.
+
+\bibitem[{Muhammad} \& {Yeasin}(2020){Muhammad} and {Yeasin}]{EigenCAM}
+{Muhammad}, M.~B. and {Yeasin}, M.
+\newblock Eigen-cam: Class activation map using principal components.
+\newblock In \emph{2020 International Joint Conference on Neural Networks
+  (IJCNN)}, pp.\  1--7, July 2020.
+\newblock \doi{10.1109/IJCNN48605.2020.9206626}.
+
+\bibitem[Price et~al.(2019)Price, Alain, and Bidelman]{beta5}
+Price, C.~N., Alain, C., and Bidelman, G.~M.
+\newblock Auditory-frontal channeling in $\alpha$ and $\beta$ bands is altered
+  by age-related hearing loss and relates to speech perception in noise.
+\newblock \emph{Neuroscience}, 423:\penalty0 18 -- 28, 2019.
+\newblock ISSN 0306-4522.
+\newblock \doi{https://doi.org/10.1016/j.neuroscience.2019.10.044}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0306452219307432}.
+
+\bibitem[{Selvaraju} et~al.(2017){Selvaraju}, {Cogswell}, {Das}, {Vedantam},
+  {Parikh}, and {Batra}]{gradcam}
+{Selvaraju}, R.~R., {Cogswell}, M., {Das}, A., {Vedantam}, R., {Parikh}, D.,
+  and {Batra}, D.
+\newblock Grad-cam: Visual explanations from deep networks via gradient-based
+  localization.
+\newblock In \emph{2017 IEEE International Conference on Computer Vision
+  (ICCV)}, pp.\  618--626, Oct 2017.
+\newblock \doi{10.1109/ICCV.2017.74}.
+
+\bibitem[Senkowski et~al.(2005)Senkowski, Molholm, Gomez-Ramirez, and
+  Foxe]{beta3}
+Senkowski, D., Molholm, S., Gomez-Ramirez, M., and Foxe, J.~J.
+\newblock {Oscillatory Beta Activity Predicts Response Speed during a
+  Multisensory Audiovisual Reaction Time Task: A High-Density Electrical
+  Mapping Study}.
+\newblock \emph{Cerebral Cortex}, 16\penalty0 (11):\penalty0 1556--1565, 12
+  2005.
+\newblock ISSN 1047-3211.
+\newblock \doi{10.1093/cercor/bhj091}.
+\newblock URL \url{https://doi.org/10.1093/cercor/bhj091}.
+
+\bibitem[Si et~al.(2017)Si, Zhou, and Hong]{net_gamma3}
+Si, X., Zhou, W., and Hong, B.
+\newblock Cooperative cortical network for categorical processing of chinese
+  lexical tone.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 114\penalty0
+  (46):\penalty0 12303--12308, 2017.
+\newblock ISSN 0027-8424.
+\newblock \doi{10.1073/pnas.1710752114}.
+\newblock URL \url{https://www.pnas.org/content/114/46/12303}.
+
+\bibitem[Tallon-Baudry \& Bertrand(1999)Tallon-Baudry and
+  Bertrand]{obj_con_gamma}
+Tallon-Baudry, C. and Bertrand, O.
+\newblock Oscillatory gamma activity in humans and its role in object
+  representation.
+\newblock \emph{Trends in Cognitive Sciences}, 3\penalty0 (4):\penalty0 151 --
+  162, 1999.
+\newblock ISSN 1364-6613.
+\newblock \doi{https://doi.org/10.1016/S1364-6613(99)01299-1}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1364661399012991}.
+
+\bibitem[Tzagarakis et~al.(2015)Tzagarakis, West, and Pellizzer]{beta4}
+Tzagarakis, C., West, S., and Pellizzer, G.
+\newblock Brain oscillatory activity during motor preparation: effect of
+  directional uncertainty on beta, but not alpha, frequency band.
+\newblock \emph{Frontiers in Neuroscience}, 9:\penalty0 246, 2015.
+\newblock ISSN 1662-453X.
+\newblock \doi{10.3389/fnins.2015.00246}.
+\newblock URL
+  \url{https://www.frontiersin.org/article/10.3389/fnins.2015.00246}.
+
+\bibitem[Wang et~al.(2020)Wang, Wu, Zhang, Xu, Zhang, Wu, and
+  Coleman]{eeg_cnn_gradcam3}
+Wang, F., Wu, S., Zhang, W., Xu, Z., Zhang, Y., Wu, C., and Coleman, S.
+\newblock Emotion recognition with convolutional neural network and eeg-based
+  efdms.
+\newblock \emph{Neuropsychologia}, 146:\penalty0 107506, 2020.
+\newblock ISSN 0028-3932.
+\newblock \doi{https://doi.org/10.1016/j.neuropsychologia.2020.107506}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0028393220301780}.
+
+\bibitem[{Zhou} et~al.(2016){Zhou}, {Khosla}, {Lapedriza}, {Oliva}, and
+  {Torralba}]{CAM}
+{Zhou}, B., {Khosla}, A., {Lapedriza}, A., {Oliva}, A., and {Torralba}, A.
+\newblock Learning deep features for discriminative localization.
+\newblock In \emph{2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pp.\  2921--2929, 2016.
+\newblock \doi{10.1109/CVPR.2016.319}.
+
+\end{thebibliography}
