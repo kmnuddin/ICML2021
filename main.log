@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 JAN 2021 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JAN 2021 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,11 +402,11 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¼ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -419,7 +419,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `demograph' on page 2 undefined on input line 121.
+LaTeX Warning: Reference `demograph' on page 2 undefined on input line 118.
 
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -440,7 +440,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-LaTeX Warning: Reference `rt_cluster' on page 2 undefined on input line 125.
+LaTeX Warning: Reference `rt_cluster' on page 2 undefined on input line 122.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -451,7 +451,7 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
 
-LaTeX Warning: Reference `topomap_gen' on page 3 undefined on input line 127.
+LaTeX Warning: Reference `topomap_gen' on page 3 undefined on input line 124.
 
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -460,45 +460,45 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-LaTeX Warning: Reference `topomap_gen' on page 3 undefined on input line 127.
+LaTeX Warning: Reference `topomap_gen' on page 3 undefined on input line 124.
 
 
-LaTeX Warning: Reference `tpe_hp_spsm' on page 3 undefined on input line 131.
+LaTeX Warning: Reference `tpe_hp_spsm' on page 3 undefined on input line 128.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `tpe_test_acc' on page 3 undefined on input line 160.
+LaTeX Warning: Reference `tpe_test_acc' on page 3 undefined on input line 157.
 
 
-LaTeX Warning: Reference `tab:cr' on page 3 undefined on input line 160.
+LaTeX Warning: Reference `tab:cr' on page 3 undefined on input line 157.
 
 
-LaTeX Warning: Reference `ovr_sal_eqn' on page 3 undefined on input line 181.
+LaTeX Warning: Reference `ovr_sal_eqn' on page 3 undefined on input line 178.
 
 
-LaTeX Warning: Reference `sc_spatial' on page 3 undefined on input line 181.
+LaTeX Warning: Reference `sc_spatial' on page 3 undefined on input line 178.
 
 
-LaTeX Warning: Reference `sc_spectral' on page 3 undefined on input line 181.
+LaTeX Warning: Reference `sc_spectral' on page 3 undefined on input line 178.
 
 
-LaTeX Warning: Reference `sc_temporal' on page 3 undefined on input line 181.
+LaTeX Warning: Reference `sc_temporal' on page 3 undefined on input line 178.
 
 
-LaTeX Warning: Reference `sc_spectral' on page 3 undefined on input line 183.
+LaTeX Warning: Reference `sc_spectral' on page 3 undefined on input line 180.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
 
-LaTeX Warning: Reference `overall_sp_saliency' on page 4 undefined on input line 185.
+LaTeX Warning: Reference `overall_sp_saliency' on page 4 undefined on input line 182.
 
 
-LaTeX Warning: Reference `demograph' on page 4 undefined on input line 185.
+LaTeX Warning: Reference `demograph' on page 4 undefined on input line 182.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -510,18 +510,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.186 
+l.183 
       pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.186 
+l.183 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Package natbib Warning: Citation `langley00' undefined on input line 247.
+Package natbib Warning: Citation `langley00' undefined on input line 244.
 
 (./main.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 15.
@@ -720,28 +720,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 328--336
 
 [7])
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 259.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 256.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 261.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 258.
 
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
 [8
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
  8362 strings out of 492995
@@ -753,7 +753,7 @@ Here is how much of TeX's memory you used:
  34i,12n,45p,2486b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 198175 bytes).
+Output written on main.pdf (8 pages, 198180 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams
